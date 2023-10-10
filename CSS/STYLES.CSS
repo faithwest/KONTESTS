@@ -5,3 +5,156 @@
     font-weight: 700;
     padding: 10px;
 }
+/*header-------------------------------------------------------------------*/
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    display: flex; /* Use flexbox to align items horizontally */
+    justify-content: space-between; /* Space elements evenly */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between;
+}
+
+.toggle-switch {
+    display: inline-block;
+    background-color: #555;
+    border-radius: 20px;
+    width: 40px;
+    height: 20px;
+    position: relative;
+    cursor: pointer;
+}
+
+.toggle-slider {
+    position: absolute;
+    background-color: #fff;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    top: 2px;
+    left: 2px;
+    transition: 0.2s;
+}
+
+.toggle-input {
+    display: none;
+}
+
+.toggle-input:checked + .toggle-slider {
+    left: 22px;
+}
+ #items {
+    font-size: 14px;
+}
+/*end header------------------------------------------------------------------*/
+
+/*search section-------------------------------------------------------------*/
+#search-section {
+    margin-top: 10px;
+    padding: 10px;
+}
+
+#search-section input {
+    padding: 6px 8px;
+    margin: 10px;
+    border: 1px solid rgb(41, 41, 193);
+    border-radius: 4px;
+
+}
+
+#search-section span{
+    background:#09a2b3 ;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 0px 4px;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    
+}
+ #search-section span:hover {
+    background-color: rgb(84, 156, 215)
+}
+/*end of search------------------------------------*/
+
+/*activities---------------------------------*/
+.circle {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #057f15; 
+    color: #fff; 
+    text-align: center;
+    border-radius: 50%; 
+    font-size: 15px; 
+    margin-right: 5px; 
+}
+
+
+    nav ul {
+        list-style: none; 
+        padding: 0;
+        text-align: center; 
+        }
+
+nav li {
+    display: inline; 
+    margin-right: 20px; 
+    margin-left: 0;
+}
+
+.slider-container {
+    width: 100%; /* Set the width to 100% */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent items from wrapping to the next line */
+    overflow-y: scroll; /* Enable vertical scrollbar */
+    max-height: 200px; /* Set a maximum height for the container */
+    
+}
+/*end-----------------------*/
+
+/*grids--------------------------------------------------------*/
+   .content {
+            text-align: center;
+        }
+
+        .date {
+            font-size: 20px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .grid-title {
+            font-size: 18px;
+            text-align: left;
+        }
+
+        .input-text {
+            width: 100%;
+            padding: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .search-button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        .reminder-list {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+        }
+/* ennndddd--------------------------------------------------*/
