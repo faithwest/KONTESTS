@@ -157,4 +157,23 @@ nav li {
             padding: 0;
             text-align: left;
         }
+        .slider {
+            width: 100%;
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+
+        .slider-content {
+            display: flex;
+        }
+
+        .slider-box {
+            width: 100%;
+            flex-shrink: 0;
+        }
+
+        .slider-buttons {
+            text-align: center;
+            margin-top: 10px;
+        }
 /* ennndddd--------------------------------------------------*/
