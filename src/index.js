@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     const apiUrl = "https://kontests.net/api/v1/all";
     const futureContestsContainer = document.getElementById("future-contests");
-    const currentContestsContainer = document.getElementById("current-contests"); // Updated variable name
+    const runningContestsContainer = document.getElementById("running-contests");
 
     // Function to fetch contest data
     function fetchContests() {
@@ -11,30 +11,57 @@ document.addEventListener("DOMContentLoaded", function () {
                 const contests = data.contests;
 
                 const futureContests = contests.filter(contest => isFutureContest(contest));
-                const currentContests = contests.filter(contest => !isFutureContest(contest)); // Updated variable name
+                const runningContests = contests.filter(contest => !isFutureContest(contest));
 
                 // Display contests in the respective tables
                 displayContests(futureContests, futureContestsContainer);
-                displayContests(currentContests, currentContestsContainer); // Updated variable name
+                displayContests(runningContests, runningContestsContainer);
             })
             .catch(error => console.error('Error:', error));
     }
 
-    // ... (rest of the code remains the same)
+    // Function to check if a contest is in the future
+    function isFutureContest(contest) {
+        const currentTime = new Date();
+        const contestStartTime = new Date(contest.start_time);
 
-    // Event listener for the "Next" button
+        return contestStartTime > currentTime;
+    }
+
+    // Function to display contests in the specified container
+    function displayContests(contests, container) {
+        const table = document.createElement("table");
+
+        for (const contest of contests) {
+            const row = table.insertRow();
+
+            // Add columns for each contest property
+            const nameCell = row.insertCell(0);
+            nameCell.textContent = contest.name;
+
+            // ... (other columns)
+
+            // Append the row to the container
+            container.appendChild(table);
+        }
+    }
+
+    // Add an event listener to fetch contests when the page loads
+    fetchContests();
+
+    // "Next" button
     document.querySelector(".next-button").addEventListener("click", function () {
         // Implement code to load the next page of contests
         // You can use pagination from the API if available
     });
 
-    // Event listener for the "Previous" button
+    // "Previous" button
     document.querySelector(".previous-button").addEventListener("click", function () {
         // Implement code to load the previous page of contests
         // You can use pagination from the API if available
     });
 
-    // Event listener for the "Submit" button
+    // "Submit" button
     document.querySelector(".search-button").addEventListener("click", function () {
         const inputText = document.querySelector(".input-text").value;
         // Implement code to search contests based on the inputText
