@@ -1,3 +1,9 @@
+body {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 500;
+    color:#09318f;
+}
+
 #top-bar {
     background: #0ea4ac;
     color: #fff;
@@ -99,12 +105,14 @@ header {
         list-style: none; 
         padding: 0;
         text-align: center; 
+        color:#09318f;
         }
 
-nav li {
+    nav li {
     display: inline; 
     margin-right: 20px; 
     margin-left: 0;
+  
 }
 
 .slider-container {
@@ -124,13 +132,17 @@ nav li {
 
         .date {
             font-size: 20px;
+            font-weight: bold;
+            color:#0a61a4;
         }
 
         .grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
+            grid-template-columns: 0.5fr 1fr;
+            gap: 10px;
             margin-top: 20px;
+           
+            
         }
 
         .grid-title {
@@ -139,24 +151,24 @@ nav li {
         }
 
         .input-text {
-            width: 100%;
+            width: 10%;
             padding: 5px;
             border: 1px solid #ccc;
         }
 
         .search-button {
-            background-color: #333;
+            background-color: #0a61a4;
             color: #fff;
             border: none;
             padding: 5px 10px;
             cursor: pointer;
         }
 
-        .reminder-list {
+        /*.reminder-list {
             list-style: none;
             padding: 0;
             text-align: left;
-        }
+        }*/
         .slider {
             width: 100%;
             overflow-x: auto;
