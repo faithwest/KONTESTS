@@ -154,6 +154,8 @@ header {
             width: 10%;
             padding: 5px;
             border: 1px solid #ccc;
+            font-weight: 600;
+            color: #0a61a4;
         }
 
         .search-button {
@@ -162,6 +164,7 @@ header {
             border: none;
             padding: 5px 10px;
             cursor: pointer;
+            font-weight: 600;
         }
 
         /*.reminder-list {
@@ -188,4 +191,33 @@ header {
             text-align: center;
             margin-top: 10px;
         }
+        .previous-button {
+            color:#fff;
+            font-weight: 600;
+            background-color: #0a61a4;
+            
+        }
+        .next-button {
+            color:#fff;
+            font-weight: 600;
+            background-color: #0a61a4;
+        }
+            
 /* ennndddd--------------------------------------------------*/
+
+/*footer-----------------------------------------------------------------*/
+/* Your existing CSS styles above */
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+}
+
+.heart {
+    color: red;
+}
+
+/* Your existing CSS styles below */
